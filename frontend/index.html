@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Smart Task Analyzer</h1>
+        <p>Prioritize your work intelligently</p>
+    </header>
+
+    <section class="container">
+
+        <!-- Task Form -->
+        <div class="card">
+            <h2>Add Task</h2>
+            <form id="taskForm">
+                <input type="text" id="title" placeholder="Task Title" required>
+                <input type="date" id="due_date">
+                <input type="number" id="estimated_hours" placeholder="Estimated Hours" min="1" value="1">
+                <input type="number" id="importance" placeholder="Importance (1-10)" min="1" max="10" value="5">
+                <input type="text" id="dependencies" placeholder="Dependencies (comma separated)">
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Sorting Mode Dropdown -->
+        <div class="card mode-select">
+            <label for="mode">Sorting Strategy:</label>
+            <select id="mode">
+                <option value="fast">Fastest Wins</option>
+                <option value="impact">High Impact</option>
+                <option value="deadline">Deadline Driven</option>
+                <option value="smart" selected>Smart Balance</option>
+            </select>
+        </div>
+
+        <!-- Task Table -->
+        <div class="card">
+            <h2>Tasks List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Due Date</th>
+                        <th>Hours</th>
+                        <th>Importance</th>
+                        <th>Dependencies</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasksTableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button id="analyzeBtn">Analyze Tasks</button>
+            <button id="suggestBtn" class="secondary">Suggest Top 3</button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="card" id="results">
+            <h2>Results</h2>
+            <div id="resultsContainer"></div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

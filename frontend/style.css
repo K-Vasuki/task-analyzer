@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f5f5f5;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+form input, form button, select {
+    padding: 8px;
+    font-size: 14px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.high { background-color: #ff9999; }    /* High priority */
+.medium { background-color: #fff799; }  /* Medium priority */
+.low { background-color: #99ff99; }     /* Low priority */
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button {
+    cursor: pointer;
+}
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
